@@ -1,0 +1,16 @@
+---
+# Run command: sudo kubectl create -f ./config/pod_no_exposed_port.yaml
+# Example of exposing ports to random ports
+# https://github.com/kubernetes/kubernetes/issues/48020
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: no-exposed-port
+spec:
+  containers:
+  - name: simple-example
+    image: simple-example
+    imagePullPolicy: Never
+  restartPolicy: Never
+---

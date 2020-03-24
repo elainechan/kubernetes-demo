@@ -1,0 +1,5 @@
+kubernetes>=10.0.*
+kafka-python>=2.0.*
+msgpack>=1.0.*
+pyramid>=1.10.*
+waitress>=1.4.*

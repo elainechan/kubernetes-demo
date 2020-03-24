@@ -1,0 +1,19 @@
+---
+# Run command: sudo kubectl create -f ./config/pod_expose_port.yaml
+# Example using k8s Python client to create from yaml:
+# https://github.com/kubernetes-client/python/blob/master/kubernetes/utils/create_from_yaml.py
+# It's almost 180 lines of code instead of just running one command
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: expose-port
+spec:
+  containers:
+  - name: simple-example
+    image: simple-example
+    imagePullPolicy: Never
+    ports:
+      - containerPort: 6543
+  restartPolicy: Never
+---
